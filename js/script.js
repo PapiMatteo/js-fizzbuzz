@@ -1,10 +1,16 @@
+// 1 RACCOLTA DATI
+
 const rowElem  = document.querySelector(".row");
 let gridString = "";
+
+// 2 CICLO FOR 
 
 for (i = 1; i <= 100; i++) {
 
     let result;
     let resultString;
+
+    // Condizioni
 
     if (i % 3 === 0 && i % 5 === 0) {
         result = "fizz-buzz"
@@ -21,8 +27,12 @@ for (i = 1; i <= 100; i++) {
     }
     console.log(i, result, resultString)
 
+    // Preparazione testo HTML 
+
     gridString += `<div class = "square ${result}">${resultString}</div>`
     
 }
+
+// 3 FINE CICLO E OUTPUT
 
 rowElem.innerHTML = gridString;
